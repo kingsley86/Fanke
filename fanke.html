@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>凡客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="angular.js"></script>
+    <script>
+        var app=angular.module('app',[]);
+
+        app.controller('pay',function($scope,$interval){
+            $scope.a=Date.now();
+            $interval(function(){
+                $scope.a=Date.now();
+            },1000)
+        })
+
+        app.controller('bugCar',function($scope){
+            $scope.data=[
+                {name:'2017春款凡客夹克 双帽双拉链 轻弹 男款 藏青色',price:108,count:0,src:'images/clo1.png'},
+                {name:'2017春款凡客夹克 凡客针织衫 菠萝花拼袖修身 男款 橄榄绿',price:24,count:0,src:'images/clo2.png'},
+                {name:'2017春款凡客夹克 凡客帆布鞋 高帮 男款白色',price:53,count:0,src:'images/clo3.png'},
+            ]
+
+            $scope.sum=function(){
+                var res=0;
+                angular.forEach($scope.data,function(item,index){
+                    res+=item.count*item.price;
+                })
+
+                return res;
+            }
+            $scope.sum1=function(){
+                var res1=0;
+                angular.forEach($scope.data,function(item,index){
+                    res1+=item.count;
+                })
+                return res1;
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <div class="wrap" ng-controller="bugCar">
+        <div class="top">
+            <div class="top-l">
+                <a><img src="images/fanke.png"> </a>
+            </div>
+            <div class="top-r">
+                <a href="javascript:">您好，你超哥</a>
+                <a class="exit" href="javascript:">退出登录</a>
+                <a class="change" href="javascript:">更换用户</a>
+                <a href="javascript:">帮助中心</a>
+            </div>
+        </div>
+        <div class="lc">
+            <a href="javascript:;"><img src="images/gwc.png"> </a>
+            <a href="javascript:;"><img src="images/message.png"> </a>
+            <a href="javascript:;"><img src="images/submit.png"> </a>
+        </div>
+        <div class="mycar">
+            <div class="mycar-t">
+                <a href="javascript:;"><img src="images/buycar.png"></a>
+                <a class="gwc" href="javascript:;">我的购物车</a>
+            </div>
+            <div class="mycar-b">
+                <a class="tell" href="javascript:;">温馨提示：</a>
+                <a href="javascript:;">1.选购清单中的商品无法保留库存，请您按时结算。</a>
+                <a href="javascript:;">2.商品的价格和库存将以订单提交时为准。</a>
+                <a href="javascript:;">3.促销活动满减优惠将均摊商品小计中。</a>
+            </div>
+        </div>
+        <div class="menu">
+            <ul class="clearfix">
+                <li class="fl">商品名称</li>
+                <li class="fl">尺寸</li>
+                <li class="fl">单价</li>
+                <li class="fl">数量</li>
+                <li class="fl">优惠</li>
+                <li class="fl">小计</li>
+                <li class="fl">操作</li>
+            </ul>
+        </div>
+        <div class="pay">
+            <div class="yushou">
+                <input type="checkbox"/>
+                <a href="javascript:;">全选预售商品（海外购商品、预售商品、普通商品均只能单独结算，预售商品请于<span ng-controller="pay">{{a|date:'yyyy-MM-dd hh:mm:ss a'}}</span>前结算）</a>
+            </div>
+        </div>
+        <div class="content">
+            <div style="width:891px;height:192px;padding-left:30px;padding-top: 10px;" >
+                <div class="content1 clearfix" ng-repeat="item in data" style="margin-bottom:15px;">
+                    <input type="checkbox" class="fl input1">
+                    <div class="item1 fl">
+                        <img src="{{item.src}}" alt="" class="fl">
+                        <p class="p1 fl"><span class="on">【预售】</span>{{item.name}}</p>
+                        <p class="p2 fl">预计发货时间 2017/02/20</p>
+                        <p class="p3 fl">M</p>
+                        <p class="p4 fl">{{item.price|currency:'¥'}}</p>
+                        <input type="number" min="0" ng-model="item.count" class="fl" style="width:72px;">
+                        <span class="p5 fl">-</span>
+                        <p class="p6 fl">{{item.count*item.price|currency:'￥'}}</p>
+                        <p class="p7 fl">删除</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot-all">
+                <div class="foot-t">
+                    <p>数量总计：<span class="on">{{sum1()}}</span>件</p>
+                    <p>您目前可享受全场免费</p>
+                </div>
+                <div class="foot-b clearfix">
+                    <div class="foot-bl fl">
+                        <p>产品金额总计（不含运费）：<span style="font-size: 22px;color:#a10000;">{{sum()|currency:'￥'}}</span></p>
+                    </div>
+                    <div class="foot-br fr">
+                        <p class="p1 fl">继续购物 </p>
+                        <p class="p2 fl">￥去结算</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+*{margin:0; padding:0; list-style:none;}
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both; }
+.fl { float: left; }
+.fr { float: right; }
+a{text-decoration:none;}
+.wrap{width:986px; margin:0 auto;}
+.wrap .top{height:40px; border-bottom:1px solid #7a7e89;}
+.wrap .top .top-l{float: left;}
+.wrap .top .top-r{float:right;}
+.wrap .top .top-r a{font-size:12px;line-height:40px; color:#676667;text-decoration: none;}
+.wrap .top .top-r .exit{color:#a10000; border-right:1px solid #996b8e;padding-right:4px;}
+.wrap .top .top-r .change{color:#a10000;margin-left:5px; margin-right:46px;}
+.wrap .lc{margin-top:10px;}
+.wrap .mycar{height:54px;}
+.wrap .mycar .mycar-t .gwc{font-size:18px; color:#323232; text-decoration:none;font-weight:bold;}
+.wrap .mycar .mycar-b{margin-top:10px;}
+.wrap .mycar .mycar-b .tell{font-size:12px; color:#ad0403;}
+.wrap .mycar .mycar-b a{font-size:12px; color:#646464;}
+.wrap .mycar .mycar-b a:hover{color:#ad0403;}
+.wrap .long{width:100%;  height:36px;line-height:36px; border:1px solid #dddfe5; background:#d1d1d1; margin-top:15px;}
+
+.wrap .long ul li{font-size:12px; color:#323232; font-weight:bold; float:left;}
+.wrap .pay{width:100%; height:22px; padding-left:38px; padding-top:12px;}
+.wrap .pay .yushou{margin-left:26px;}
+.wrap .pay a{font-size:12px; color:#a10000;}
+.wrap .pay .main{width:950px; height:210px; background:#f8f8f8; margin-top:12px; padding-left:28px; position:relative;}
+.wrap .pay .main .c1 .gou1{position:absolute; top:27px; left:26px;}
+.wrap .pay .main .c1 .img{margin-left:28px; margin-right:8px;}
+.wrap .pay .main .c1{padding-top:10px;}
+.wrap .pay .main .c1 .txt{width:238px;}
+.wrap .pay .main .c1 .txt a:nth-child(1){font-size:12px; font-weight:bold; color:#a10000;}
+.wrap .pay .main .c1 .txt a:nth-child(2){font-size:12px; font-weight:bold; color:#333;}
+.wrap .pay .main .c1 .gray{font-size:12px; color:#aba7a7; position:absolute; top:32px; left:336px;}
+.wrap .pay .main .c1 .size{position:absolute;top:20px;left:508px;}
+.wrap .menu{width:100%; height:38px; background:#d1d1d1; margin-top:13px; position:relative;}
+.wrap .menu ul{}
+.wrap .menu ul li{font-size:12px; color:#333; font-weight:bold;line-height:38px;}
+.wrap .menu ul li:nth-child(1){position:absolute; left:305px;}
+.wrap .menu ul li:nth-child(2){position:absolute; left:530px;}
+.wrap .menu ul li:nth-child(3){position:absolute; left:595px;}
+.wrap .menu ul li:nth-child(4){position:absolute; left:676px;}
+.wrap .menu ul li:nth-child(5){position:absolute; left:749px;}
+.wrap .menu ul li:nth-child(6){position:absolute; left:802px;}
+.wrap .menu ul li:nth-child(7){position:absolute; left:847px;}
+.content{
+    width:986px;
+    height:212px;
+    background: #e2e1e1;
+}
+.content .content1 .input1{
+    margin:19px 38px 19px 0;
+}
+.content .content1 .item1{
+    width:840px;
+    font-size: 12px;
+}
+.content1 .item1 img{
+    border:1px solid #ccc;
+    margin-right:8px;
+}
+.content1 .item1 .p1{
+    color:#323232;
+    width:220px;
+}
+.content1 .item1 .on{
+    color:#a10000;
+}
+.content1 .item1 .p2{
+    width:72px;
+    color:#ccc;
+    margin-right: 95px;
+}
+.content1 .item1 .p3{
+    color:#8b3389;
+    margin-right:52px;
+}
+.content1 .item1 .p4{
+    color:#323232;
+    margin-right: 28px;
+}
+.content1 .item1 .p5{
+    margin-left:26px;
+}
+.content1 .item1 .p6{
+    color:#323232;
+    margin-right:18px;
+    margin-left: 30px;
+}
+.content1 .item1 .p7{
+    color:#ccc;
+}
+.marT{
+    margin-top: 20px;
+}
+.footer{margin-top:10px; width:982px; margin:0 auto;}
+.foot-all{ height:70px; width:956px; border:1px solid #ebe5bb; background:#fffff5; padding:32px 10px 33px 14px;}
+.foot-all .foot-t{font-size: 12px;  color:#323232; padding-left:42px;}
+.footer-all .footer-t .on{ color:#a10000;}
+.footer-all .footer-b{padding-top:8px; height:52px;}
+.footer-all .footer-b .foot-bl{ padding-top: 20px; font-size: 12px;}
+.footer-all .footer-b .foot-br{height:50px;}
+.footer-all .footer-b .foot-br .p1{color:#323232;width:120px;height:36px;background:#ededee;text-align: center;
+    line-height:36px;font-size:12px;border-radius:5px;margin-top:6px;margin-right:12px;}
+.footer-all .footer-b .foot-br .p2{color:#fff;width:160px; height:50px; background:#bd0a0a;text-align: center;
+    line-height:50px;font-size:12px; border-radius:5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
